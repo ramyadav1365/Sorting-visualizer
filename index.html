@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@500&family=Nunito:wght@700&display=swap"
+        rel="stylesheet">
+      
+
+</head>
+
+<body >
+<header>
+        <nav class="container">
+            <div class="header_right">
+                <div class="nav-heading">
+
+                    Sorting visualizer
+
+                </div>
+
+                <div class="algos">
+                    <button id="btncolor">Bubble</button>
+                    <button id="btncolor">Merge</button>
+                    <button id="btncolor">Quick</button>
+
+                    <button id="btncolor">Insertion</button>
+                    <button id="btncolor">Heap</button>
+                    <button id="btncolor">Selection</button>
+                </div>
+            </div>
+
+            <div class="array-inputs">
+                <button class="bt1">
+                    <p>Size of the array:</p>
+                    <input id="a_size" type="range" min=10 max=150 step=1 value=80>
+                </button>
+
+                <button class="bt1">
+                    <p>Speed of the algorithm:</p>
+                    <input id="a_speed" type="range" min=1 max=5 step=.5 value=4>
+                </button>
+
+                <button id="a_generate" class="bta"> Generate New Array!</button>
+                <button class="refresh" onClick="window.location.reload()">Refresh &#x21bb</button>
+                <!-- <button class="refresh" onClick="reset()">Stop</button> -->
+
+            </div>
+
+
+        </nav>
+    </header>
+
+    <section>
+
+        <div id="Info_Cont1">
+
+            
+
+            <div class="Complexity_Containers" id="Time_Complexity_Types_Container">
+            <h3>TIME COMPLEXITY</h3>
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Worst case:</p>
+                    <p id="Time_Worst"></p>
+                </div>
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Average case:</p>
+                    <p id="Time_Average"></p>
+                </div>
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Best case:</p>
+                    <p id="Time_Best"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="array_container">
+
+        </div>
+
+        <div id="Info_Cont2">
+
+            <h3>SPACE COMPLEXITY</h3>
+
+            <div class="Complexity_Containers" id="Space_Complexity_Types_Container">
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Worst case: &nbsp; </p>
+                    <p id="Space_Worst"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+    <footer>
+        <div class="footer">
+
+        </div>
+    </footer>
+
+    <script src="./scripts/main.js"></script>
+    <!-- -This should be at the end of body and should be loaded before sorts.js -->
+    <script src="./scripts/visualizations.js"></script>
+    <!-- This should be loaded after main.js -->
+
+    <script src="./scripts/bubble_sort.js"></script>
+    <script src="./scripts/selection_sort.js"></script>
+    <script src="./scripts/insertion_sort.js"></script>
+    <script src="./scripts/merge_sort.js"></script>
+    <script src="./scripts/quick_sort.js"></script>
+    <script src="./scripts/heap_sort.js"></script>
+</body>
+
+
+
+</html>
